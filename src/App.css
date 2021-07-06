@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+.app {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 900px;
+  padding: 25px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app .app__inputBlock {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.app .app__inputBlock .app__label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 25px;
+  width: 150px;
+  text-align: end;
+  margin-top: 10px;
+}
+
+.app .app__inputBlock .app__inputField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.app .app__inputBlock .app__inputField .app__input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid lightgray;
+  padding: 5px;
+  color: grey;
+  font-size: 1.05rem;
+}
+
+.app .app__inputBlock .app__inputField .app__input:focus {
+  outline: none;
+}
+
+.app .app__inputBlock .app__validationMessage {
+  color: red;
+}
+
+.app .app__submitBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .app__submitBtn .app__label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 25px;
+  width: 150px;
+  text-align: end;
+}
+
+.app .app__submitBtn .app__submit {
+  padding: 13px 20px;
+  border: none;
+  background-color: #ff9100;
   color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.app .app__submitBtn .app__submit:hover {
+  background-color: white;
+  outline: 2px solid #ff9100;
+  color: #ff9100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width: 768px) {
+  .app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .app .app__inputBlock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .app .app__inputBlock .app__label {
+    margin: 0;
+    text-align: start;
+    margin-bottom: 5px;
+  }
+  .app .app__submitBtn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .app .app__submitBtn .app__label {
+    display: none;
   }
 }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,94 @@
+.app {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 900px;
+  padding: 25px 0;
+
+  .app__inputBlock {
+    margin: 25px 0;
+    display: flex;
+
+    .app__label {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-right: 25px;
+      width: 150px;
+      text-align: end;
+      margin-top: 10px;
+    }
+
+    .app__inputField {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .app__input {
+        width: 100%;
+        height: 50px;
+        border: 2px solid lightgray;
+        padding: 5px;
+        color: grey;
+        font-size: 1.05rem;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .app__validationMessage {
+      color: red;
+    }
+  }
+  .app__submitBtn {
+    display: flex;
+    align-items: center;
+    .app__label {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-right: 25px;
+      width: 150px;
+      text-align: end;
+    }
+    .app__submit {
+      padding: 13px 20px;
+      border: none;
+      background-color: rgb(255, 145, 0);
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: white;
+        outline: 2px solid rgb(255, 145, 0);
+        color: rgb(255, 145, 0);
+      }
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    flex-direction: column;
+    .app__inputBlock {
+      flex-direction: column;
+      .app__label {
+        margin: 0;
+        text-align: start;
+        margin-bottom: 5px;
+      }
+    }
+    .app__submitBtn {
+      flex-direction: column;
+      align-items: flex-start;
+      .app__label {
+        display: none;
+      }
+    }
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
